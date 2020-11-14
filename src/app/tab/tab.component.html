@@ -1,0 +1,20 @@
+<p>{{session.id}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Segment Id</th>
+                    <th scope="col">Start Time</th>
+                    <th scope="col">End Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let segment of session.segments" [ngStyle]="{'background-color' : currentlySelectedSegment && segment.id === currentlySelectedSegment.id ? 'grey': 'white'}" (mouseover)="mousedOver(segment)" (click)="selectSegment(segment)" app-table-element [segment]="segment"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

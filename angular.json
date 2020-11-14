@@ -24,9 +24,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "electron-angular-demo"
+    }
+  },
+  "defaultProject": "electron-angular-demo",
+  "cli": {
+    "analytics": false
+  }
 }
